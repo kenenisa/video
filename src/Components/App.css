@@ -1,0 +1,25 @@
+video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    min-height: 100%;
+    width: unset;
+    object-fit: unset;
+}
+.portrate,
+.landscape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.portrate {
+    width: 100%;
+    height: auto;
+}
+.landscape {
+    height: 100%;
+    width: auto;
+}

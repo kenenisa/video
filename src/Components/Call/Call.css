@@ -1,0 +1,279 @@
+.call{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+@keyframes flash{
+    0%{
+        border:0px solid white;
+    }
+    50%{
+        border:7px solid white;
+    }
+    100%{
+        border:0px solid white;
+    }
+}
+.call .flash{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:10;
+    background: rgba(0,0,0,0.4);
+    display:none;
+}
+.call .flash.show{
+    display:block;
+    animation: flash 500ms forwards;
+}
+/* .call div{
+    border:1px solid red;
+} */
+.call .top{
+    position:relative;
+    top:0.5rem;
+    width:25rem;
+    margin:auto;
+    height:4rem;
+    z-index:3;
+}
+.call .circle{
+    position: relative;
+    background:rgba(0,0,0,0.4);
+    color:white;
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+    display:inline-block;
+    margin:0 1rem;
+    font-size:1.2rem;
+    font-weight:500;
+    cursor: pointer;
+}
+.call .circle.active{
+    background:rgba(0, 132, 219, 0.555);
+}
+.call .circle.active:hover{
+    background:rgba(0, 88, 146, 0.822);    
+}
+.call .circle:hover{
+    background:rgba(0,0,0,0.7)
+}
+
+.call .circle i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+
+.call .bottom{
+    position:absolute;
+    bottom:4rem;
+    left:50%;
+    transform:translateX(-50%);
+    width:20rem;
+    height:4rem;
+    z-index:1;
+}
+.call .bottom .hang-up{
+    position: relative;
+    top:0.75rem;
+    width:5.5rem;
+    height:5.5rem;
+    background:rgba(248, 34, 0, 0.945);
+}
+.call .bottom .hang-up:hover{
+    box-shadow:2px 2px 10px 2px rgba(248, 54, 0, 0.66); 
+}
+.call .bottom .hang-up:active{
+    box-shadow:2px 2px 10px 2px rgba(248, 54, 0, 0.66); 
+}
+.call .bottom .hang-up i{
+    font-size:2.5rem;
+}
+
+
+.call .videos{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    /* background:blue; */
+}
+.call .videos .other{
+    width:100%;
+    height:100%;
+    z-index:1;
+    background:rgb(54, 54, 54);
+    overflow: hidden;
+}
+
+.call .videos .my{
+    position: absolute;
+    bottom:7rem;
+    right:1rem;
+    border-radius:10px;
+    border:1px solid rgb(0, 132, 255);
+    z-index:1;
+    overflow: hidden; 
+    height:auto;
+    width:30%;
+    opacity:1;
+    transition: all 200ms ease-out;
+}
+.call .videos .my img{
+    position: relative;
+    width:100%;
+    height:auto
+}
+@media screen and (min-width:1000px){
+    .call .videos .my{
+        transform: scale(0.5);
+        transform-origin: 0% 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .call .videos .my{
+        width:40%;
+    }
+}
+.call .my.hide{
+    opacity:0;
+    right:-5rem;
+}
+
+.call .texts{
+    position:absolute;
+    top:8rem;
+    left:10%;
+    z-index:2;
+    width:70%;
+    max-width:20rem;
+    /* overflow: hidden; */
+    word-wrap: break-word;
+}
+.call .texts.hide{
+    display: none;
+}
+@media screen and (min-width:800px){
+    .call .texts{
+        left:20%;
+        
+    }
+}
+.call .texts .con{
+    position:relative;
+    top:0;
+    color:white;
+    padding:0.5rem 1rem;
+    margin-bottom:1rem;
+    background:rgba(0, 0, 0, 0.15);
+    text-shadow:1px 2px 4px rgba(0, 0, 0, 0.541);
+    border-radius:5px;
+}
+.call .texts .con .name{
+    position:relative;
+    top:0;
+    left:0;
+    height:100%;
+    font-size:1.2rem;
+    font-weight:400;
+}
+.call .texts .con .msg{
+    position:relative;
+    height:100%;
+    font-weight:300;
+    letter-spacing: 1px;
+}
+.call .filter .options{
+    position:absolute;
+    top:4.5rem;
+    left:-3.5rem;
+    background:rgba(0, 0, 0, 0.822);
+    border-radius:5px;
+    padding:0.5rem 0;
+    width:11rem;
+    z-index:5;
+    font-weight:300;
+    letter-spacing: 1px;
+}
+.call .filter .options div{
+    padding:0.5rem 1rem
+}
+.call .filter .options div:hover{
+    background:rgba(65, 65, 65, 0.808);
+    cursor: pointer;
+}
+.call .filter .options.hide{
+    display:none;
+}
+.call .text .input{
+    position:absolute;
+    top:4.5rem;
+    opacity:1;
+    transition: all 200ms ease-out;
+}
+.call .text .input.hide{
+    top:-3rem;
+    opacity: 0;
+}
+.call .text .input input{
+    width:21rem;
+    padding:0.5rem;
+    border-radius:7px;
+    border:1px solid rgba(0, 0, 0, 0.8);
+    background:rgba(0, 0, 0, 0.5);
+    color:white;
+    font-weight:300;
+    font-size:1.2rem;
+}
+.call .text .input input:focus{
+    background:rgba(0, 0, 0, 0.8);
+    border:1px solid rgba(0, 0, 0, 1);
+    outline:none;
+}
+.call .hd .msg{
+    position:absolute;
+    top:5rem;
+    left:-13rem;
+    width:22rem;
+    padding:0.5rem;
+    font-size:1.2rem;
+    border-radius:25px;
+    text-shadow:1px 1px 2px rgba(0, 0, 0, 0.74);
+    background: rgba(0, 0, 0, 0.514);
+    transition:all 200ms ease-out;
+    opacity:1;
+    z-index:0;
+}
+.call .hd .msg.hide{
+    top:-3rem;
+    opacity:0;
+}
+.call .pausing{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(0, 0, 0, 0.555);
+    z-index:10;
+    padding:1rem;
+    border-radius:50%;
+    color:white;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.733); 
+}
+.call .pausing i{
+    font-size:5rem;
+}
+.call .pausing.hide{
+    display:none;
+}
+
+
