@@ -47,11 +47,24 @@
   width: calc(100% - 8.55rem);
   height: 100%;
 }
+.contact .text span{
+ position:relative;
+ font-size:1.3rem;
+ color:#aaa;
+}
+.contact .text span.hide{
+ display:none;
+}
+.contact .text span.show{
+ display:inline;
+}
 .contact .text .name {
-  position: absolute;
+  position: relative;
   top: 0.2rem;
   font-size: 1.5rem;
   font-weight: 500;
+  display:inline-block;
+  margin-right:1rem
 }
 .contact .text .log {
   position: absolute;

@@ -1,0 +1,11 @@
+.no-contact{
+    position: absolute;
+    top:5rem;
+    width:30rem;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:1.5rem;
+    color:#aaa;
+    font-weight:300;
+    text-align: center;
+}

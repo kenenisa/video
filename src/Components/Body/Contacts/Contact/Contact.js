@@ -1,27 +1,62 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Contact.css";
 import { Router } from "../../../Router/Koute";
+import profileContext from "../../../../Context/profileContext";
 //
-function Contact() {
+//
+function Contact({ friend, peers }) {
     const { changeRoute } = useContext(Router);
+    const { changeProfile } = useContext(profileContext);
+    const [online, setOnline] = useState(false);
+
+    const isOnline = () => {
+        if (peers[friend.id]) {
+            if (!online) {
+                setOnline(true);
+            }
+        } else {
+            if (online) {
+                setOnline(false);
+            }
+        }
+    }
+    useEffect(() => {
+        isOnline();
+        var check = setInterval(isOnline, 5000);
+        return () => {
+            clearInterval(check);
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     let random = Math.random();
     return (
-        <div className='contact' onClick={() => changeRoute('profile')}>
+        <div className='contact'>
             <div className='con'>
-                <div className='img-con'>
-                    <div className='img'>
-                        <img src='user-boy.jpg' className='' />
+                <span
+                    onClick={() => {
+                        changeProfile(friend);
+                        changeRoute("profile");
+                    }}>
+                    <div className='img-con'>
+                        <div className='img'>
+                            <img
+                                src={friend.photo?friend.photo:'profile.png'}
+                                className=''
+                                alt='profile'
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className='text'>
-                    <div className='name'>Kenenisa</div>
-                    <div className='log'>
-                        <span className='icon'>
-                            <i className='material-icons'>call_made</i>
-                        </span>
-                        <span className='date'> ,Today</span>
+                    <div className='text'>
+                        <div className='name'>{friend.name}</div>
+                        <span className={online?'show':'hide'}>Online</span>
+                        <div className='log'>
+                            <span className='icon'>
+                                <i className='material-icons'>call_made</i>
+                            </span>
+                            <span className='date'> ,Today</span>
+                        </div>
                     </div>
-                </div>
+                </span>
                 <div className='more'>
                     <button
                         id={`demo-menu-lower-right ${random}`}

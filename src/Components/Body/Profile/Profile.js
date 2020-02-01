@@ -1,22 +1,25 @@
 import React,{useContext} from "react";
 import "./Profile.css";
 import { Router } from "../../Router/Koute";
+import profileContext from "../../../Context/profileContext";
+
 //
 function Profile() {
     const { changeRoute } = useContext(Router);
+    const { profile,call } = useContext(profileContext);
     return (
         <React.Fragment>
             <div className='background'></div>
             <div className='profile'>
                 <div className='user'>
                     <div className='img'>
-                        <img src='user-boy.jpg' alt='' />
+                        <img src={profile.photo} alt='profile' />
                     </div>
-                    <div className='name'>Kenenisa</div>
+                    <div className='name'>{profile.name}</div>
                     <div className='buttons'>
                         <button
                             className='call-btn mdl-button mdl-js-ripple-effect mdl-js-button'
-                            onClick={() => changeRoute("going")}>
+                            onClick={() => { call(profile.id); }}>
                             <i className='material-icons'>call</i>
                         </button>
                         <button

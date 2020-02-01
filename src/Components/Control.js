@@ -1,15 +1,13 @@
 import React from 'react'
 //components
 import Header from './Header/Header';
-import Drawer from './Drawer/Drawer';
 import Body from './Body/Body';
 //
-function Control() {
+function Control({peers}) {
     return (
         <React.Fragment>
-                <Header />
-                <Drawer />
-                <Body />
+            <Header />
+            <Body peers={peers}/>
         </React.Fragment>
     );
 }

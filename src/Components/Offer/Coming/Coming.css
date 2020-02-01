@@ -60,6 +60,7 @@
     width:5.5rem;
     height:5.5rem;
     background:rgba(248, 34, 0, 0.945);
+    cursor: pointer;
 }
 .coming .button i{
     position:absolute;

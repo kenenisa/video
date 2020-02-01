@@ -1,0 +1,47 @@
+.home{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgb(240, 242, 246);
+}
+.home .con{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    width:20.5rem;
+    height:14rem;
+}
+.home .card{
+    position: relative;
+    top:3rem;
+    left:0;
+    margin:0 0.5rem;
+    width:9rem;
+    height: 9rem;
+    border:1px solid #aaa;
+    display:inline-block;
+    background:white;
+    border-radius:5px;
+    box-shadow:2px 2px 5px 1px rgba(170, 170, 170, 0.534);
+    box-sizing: border-box;
+    padding:1rem;
+    text-align:center;
+    font-size:2rem;
+    font-weight: 500;
+}
+.home .card:hover{
+    background:rgba(170, 170, 170, 0.1);
+    cursor: pointer;
+}
+.home .card i{
+    display: block;
+    font-size:4rem;
+    margin-bottom:1rem
+}
+.home .mode{
+    font-size:2.5rem;
+    text-align: center;
+}

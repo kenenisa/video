@@ -1,0 +1,213 @@
+body{
+    overflow:hidden;
+}
+canvas{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.pages .con{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    height:30rem;
+    width:30rem;
+}
+.pages .text{
+    text-align: center;
+    font-size:4rem;
+    font-weight:500;
+    margin-bottom:3rem;
+}
+.pages .intro{
+    position: relative;
+    top:2rem;
+text-align:center;
+}
+.pages .intro .slide{
+    position: absolute;
+    left:10rem;
+    opacity: 0;
+    width:100%;
+}
+.pages .intro .icon{
+    position:relative;
+    height:5rem;
+    width:100%;
+    margin-bottom:1rem;
+}
+.pages .intro .icon i{
+    font-size:5rem
+}
+.pages .intro .Title{
+    font-size:3rem;
+    margin-bottom:3rem;
+}
+.pages .intro .des{
+    font-size:1.4rem;
+    line-height: 1.8rem;
+}
+@keyframes s1{
+    0%{
+        opacity:0;
+        left:10rem;
+    }
+    5%{
+        opacity:1;
+        left:0;
+    }
+    25%{
+        opacity:1;
+        left:0;
+    }
+    30%{
+        opacity:0;
+        left:-10rem;
+    }
+    100%{
+        opacity:0;
+        left:10rem;
+    }
+}
+@keyframes s2{
+    25%{
+        opacity:0;
+        left:10rem;
+    }
+    30%{
+        opacity:1;
+        left:0;
+    }
+    60.33333%{
+        opacity:1;
+        left:0;
+    }
+    66.66666%{
+        opacity:0;
+        left:-10rem;
+    }
+    100%{
+        opacity:0;
+        left:10rem;
+    }
+}
+@keyframes s3{
+    60%{
+        opacity:0;
+        left:10rem;
+    }
+    65%{
+        opacity:1;
+        left:0;
+    }
+    90%{
+        opacity:1;
+        left:0;
+    }
+    95%{
+        opacity:0;
+        left:-10rem;
+    }
+    100%{
+        opacity:0;
+        left:10rem;
+    }
+}
+.pages .s1{
+    animation:s1 20s infinite;
+}
+.pages .s2{
+    animation:s2 20s infinite;
+}
+.pages .s3{
+    animation:s3 20s infinite;
+}
+.pages .buttons{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:26.5rem;
+}
+.pages .buttons button{
+    margin:0.5rem;
+    font-size:1.5rem;
+    padding:1.5rem 3rem;
+    font-weight: 600;
+    background:rgb(228, 228, 228);
+    color:rgb(51, 51, 51);
+    border:1px solid rgb(51, 51, 51);
+    border-radius:4px;
+    letter-spacing: 1px;
+}
+.pages .buttons button.signup{
+    font-weight: 600;
+    border:0px;
+    background:#0071a5;
+    color:white;
+}
+.pages .forms{
+    position: relative;
+    top:1.5rem;
+    width:100%;
+}
+.pages .forms input{
+    position: relative;
+    font-size:1.75rem;
+    width:100% !important;
+    box-sizing: border-box;
+    padding:1rem 1.5rem;
+    border-radius:5px;
+    margin-bottom:1rem;
+    font-weight: 300;
+    border:1px solid #aaa;
+    background:#ddd;
+}
+.pages .forms input:focus{
+    background:white;
+}
+.pages .br{
+    border:2px solid rgba(255, 0, 0, 0.459) !important;
+}
+/* div{
+    border:1px solid red;
+} */
+@media screen and (max-width:460px){
+    .pages .con{
+        width:100%;
+    }
+    .pages .forms input{
+        left:5%;
+        width:90% !important;   
+    }
+    .pages .buttons button{
+        padding:1rem 2rem;
+    }
+    .pages .buttons{
+        width:21.7rem;
+    }
+}
+@media screen and (max-height:500px){
+    body{
+        overflow-y: scroll;
+    }
+}
+.pages .error{
+    position: relative;
+    margin-top:-1.5rem;
+    left:5%;
+    width:90%;
+    box-sizing: border-box;
+    border:1px solid red;
+    background:rgb(155, 126, 126);
+    border-radius:5px;
+    padding:0.25rem 0.5rem;
+    margin-bottom:0.5rem;
+    font-size:1.1rem;
+}
+.pages .error.msg{
+    border:1px solid rgb(255, 166, 0);
+    background:rgb(155, 141, 96);
+}

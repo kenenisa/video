@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppSignal from './Components/AppSignal';
+import AppSignal from './Components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<AppSignal />, document.getElementById("root"));

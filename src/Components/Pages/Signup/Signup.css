@@ -1,0 +1,113 @@
+.Signup{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.264);
+}
+.Signup .con{
+    height:39rem;
+}
+.Signup .forms{
+    position: relative;
+    top:1rem;
+    left:-0.25rem;
+    width:100%;
+}
+.Signup .forms input{
+    font-size:1.75rem;
+    width:100%;
+    box-sizing: border-box;
+    padding:1rem 1.5rem;
+    border-radius:5px;
+    margin-bottom:1rem;
+    font-weight: 300;
+}
+.Signup input.photo{
+    padding:0;
+    left:50%;
+    transform: translateX(-50%);
+    margin:auto;
+    width:11rem !important;
+    z-index:1;
+    opacity:0;
+}
+.Signup .provide-photo{
+    position:relative;
+    left:5%;
+    width:90%;
+    height:2.6rem;
+}
+.Signup .provide-photo .fake-button{
+    position:absolute;
+    top:0;
+    left:0;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.264);
+    width:11rem;
+    left:50%;
+    transform: translateX(-50%);
+    height:100%;
+    font-weight: 600;
+    font-size:1rem;
+    z-index:0;
+    border:1px solid white;
+}
+.Signup .provide-photo .fake-button i{
+    font-size:2.5rem;
+    margin-top:-0.3rem;
+}
+.Signup .user{
+    position:relative;
+    top:0.75rem;
+    left:5%;
+    width:90%;
+    height:7rem;
+    box-sizing: border-box;
+    border:1px solid rgba(255, 255, 255, 0.2);
+}
+.Signup .user .img{
+    position:relative;
+    bottom:-0.25rem;
+    left:0.5rem;
+    width:4.5rem;
+    height:4.5rem;
+    border-radius:50%;
+    overflow: hidden;
+    display:inline-block;
+}
+.Signup .user .img i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size:3rem;
+    text-align:center;
+    z-index:0;
+}
+.Signup .user .img img{
+    position:relative;
+    top:-5%;
+    left:-5%;
+    width:110%;
+    height:110%
+}
+.Signup .user .name{
+    position: absolute;
+    top:3.5rem;
+    left:6rem;
+    height:100%;
+    width:calc(100% - 6rem);
+    font-size:2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Signup .user .header{
+    background: rgba(255, 255, 255, 0.2);
+    font-size:1.3rem;
+    text-align:center;
+    padding:0.15rem
+}

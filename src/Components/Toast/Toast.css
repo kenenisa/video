@@ -1,0 +1,20 @@
+.toast{
+    position: fixed;
+    top:3rem;
+    left:50%;
+    transform: translateX(-50%);
+    min-width:10rem;
+    max-width:20rem;
+    padding:1rem;
+    border-radius:10px;
+    z-index:100000000000000;
+    text-align:center;
+    font-size:1.5rem;
+    text-shadow:2px 2px 3px rgba(255, 255, 255, 0.621); 
+}
+.toast.w{
+    background:rgba(255, 217, 46, 0.762);
+}
+.toast.r{
+    background:rgba(255, 174, 160, 0.662);
+}

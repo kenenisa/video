@@ -26,7 +26,7 @@ export const Router = React.createContext({ route: "", changeRoute: () => {} });
 export function Route({ path, component }) {
     const { route } = useContext(Router);
     if (route.toLowerCase() === path.toLowerCase()) {
-        return component();
+        return <React.Fragment>{component()}</React.Fragment>;
     } else {
         return null;
     }
