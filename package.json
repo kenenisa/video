@@ -10,12 +10,14 @@
     "simple-peer": "^9.6.0",
     "webrtc-swarm": "^2.9.0"
   },
+  "homepage": "https://kenenisa.github.io/video",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "signalhub": "signalhub listen -p 8080",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
