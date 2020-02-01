@@ -3,9 +3,8 @@ import createSwarm from "webrtc-swarm";
 import { getStorage } from "./serviceProvider";
 //
 const hub = signalhub("vid-chat", [
-    // "https://signalhub-hzbibrznqa.now.sh",
-    // "https://signalhub-jccqtwhdwc.now.sh",
-    "http://localhost:8080"
+    "https://signalhub-hzbibrznqa.now.sh",
+    "https://signalhub-jccqtwhdwc.now.sh",
 ]);
 const user = getStorage().me;
 if (!localStorage.me) {
